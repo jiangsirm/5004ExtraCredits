@@ -11,15 +11,13 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
 <VBox alignment="CENTER" prefHeight="528.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.extracredits.HelloController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="welcomeText" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
-
 
     <!--test codes from table view-->
     <Label style="-fx-font: NORMAL 20 Tahoma;" text="Task Logs">
@@ -27,11 +25,17 @@
 
     <TableView fx:id="tableView">
         <columns>
-            <TableColumn text="First Name">
+            <TableColumn resizable="false" prefWidth="50.0" text="ID">
             </TableColumn>
-            <TableColumn text="Last Name">
+            <TableColumn resizable="false" prefWidth="290.0" text="Text">
             </TableColumn>
-            <TableColumn text="Email Address">
+            <TableColumn resizable="false" prefWidth="80.0" text="Completed">
+            </TableColumn>
+            <TableColumn resizable="false" prefWidth="100.0" text="Due">
+            </TableColumn>
+            <TableColumn resizable="false" prefWidth="80.0" text="Priority">
+            </TableColumn>
+            <TableColumn resizable="false" prefWidth="160.0" text="Category">
             </TableColumn>
         </columns>
     </TableView>
@@ -39,18 +43,42 @@
 
    <ToolBar prefHeight="40.0" prefWidth="200.0">
      <items>
-       <Button mnemonicParsing="false" text="Button" />
-          <!--test codes for combo box-->
-          <ComboBox fx:id="fruitCombo" prefWidth="90.0" promptText="choose">
+         <!--Text fields for Description-->
+         <TextField fx:id="taskText" prefWidth="250" promptText="Enter Description">
+         </TextField>
+
+         <!--codes for complete combo box-->
+         <ComboBox fx:id="complete" prefWidth="90.0" promptText="choose">
+             <items>
+                 <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="True" />
+                     <String fx:value="false" />
+                 </FXCollections>
+             </items>
+         </ComboBox>
+         <!--end of combo box codes-->
+         <DatePicker fx:id="date" prefWidth="120" promptText="Select due date">
+         </DatePicker>
+
+          <!--codes for priority combo box-->
+          <ComboBox fx:id="priority" prefWidth="90.0" promptText="choose">
               <items>
                   <FXCollections fx:factory="observableArrayList">
-                      <String fx:value="Apple" />
-                      <String fx:value="Orange" />
-                      <String fx:value="Pear" />
+                      <String fx:value="HIGH" />
+                      <String fx:value="MEDIUM" />
+                      <String fx:value="LOW" />
                   </FXCollections>
               </items>
           </ComboBox>
-         <!--end of test codes-->
+         <!--end of combo box codes-->
+
+         <!--text field for category-->
+         <TextField fx:id="category" prefWidth="170.0" promptText="Enter Category">
+         </TextField>
+
      </items>
    </ToolBar>
+
+    <Label fx:id="addText" />
+    <Button fx:id="addButton" onAction="#onAddButtonClick" text="Add" />
 </VBox>
