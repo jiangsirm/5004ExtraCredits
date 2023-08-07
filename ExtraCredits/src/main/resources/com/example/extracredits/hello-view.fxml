@@ -25,18 +25,18 @@
 
     <TableView fx:id="tableView">
         <columns>
-            <TableColumn resizable="false" prefWidth="50.0" text="ID">
-            </TableColumn>
-            <TableColumn resizable="false" prefWidth="290.0" text="Text">
-            </TableColumn>
-            <TableColumn resizable="false" prefWidth="80.0" text="Completed">
-            </TableColumn>
-            <TableColumn resizable="false" prefWidth="100.0" text="Due">
-            </TableColumn>
-            <TableColumn resizable="false" prefWidth="80.0" text="Priority">
-            </TableColumn>
-            <TableColumn resizable="false" prefWidth="160.0" text="Category">
-            </TableColumn>
+<!--            <TableColumn resizable="false" prefWidth="50.0" text="ID:">-->
+<!--            </TableColumn>-->
+<!--            <TableColumn resizable="false" prefWidth="290.0" text="Description:">-->
+<!--            </TableColumn>-->
+<!--            <TableColumn resizable="false" prefWidth="80.0" text="Completed?">-->
+<!--            </TableColumn>-->
+<!--            <TableColumn resizable="false" prefWidth="100.0" text="Due:">-->
+<!--            </TableColumn>-->
+<!--            <TableColumn resizable="false" prefWidth="80.0" text="Priority:">-->
+<!--            </TableColumn>-->
+<!--            <TableColumn resizable="false" prefWidth="160.0" text="Category:">-->
+<!--            </TableColumn>-->
         </columns>
     </TableView>
     <!--end of test codes-->
@@ -44,36 +44,36 @@
    <ToolBar prefHeight="40.0" prefWidth="200.0">
      <items>
          <!--Text fields for Description-->
-         <TextField fx:id="taskText" prefWidth="250" promptText="Enter Description">
+         <TextField fx:id="taskText" prefWidth="250" promptText="Enter Description:">
          </TextField>
 
          <!--codes for complete combo box-->
-         <ComboBox fx:id="complete" prefWidth="90.0" promptText="choose">
+         <ComboBox fx:id="complete" prefWidth="180.0" promptText="Has this task been completed?">
              <items>
                  <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="True" />
-                     <String fx:value="false" />
+<!--                     <String fx:value="Yes" />-->
+<!--                     <String fx:value="No" />-->
                  </FXCollections>
              </items>
          </ComboBox>
          <!--end of combo box codes-->
-         <DatePicker fx:id="date" prefWidth="120" promptText="Select due date">
+         <DatePicker fx:id="date" prefWidth="120" promptText="Select due date:">
          </DatePicker>
 
           <!--codes for priority combo box-->
-          <ComboBox fx:id="priority" prefWidth="90.0" promptText="choose">
+          <ComboBox fx:id="priority" prefWidth="90.0" promptText="Priority?">
               <items>
                   <FXCollections fx:factory="observableArrayList">
-                      <String fx:value="HIGH" />
-                      <String fx:value="MEDIUM" />
-                      <String fx:value="LOW" />
+<!--                      <String fx:value="HIGH" />-->
+<!--                      <String fx:value="MEDIUM" />-->
+<!--                      <String fx:value="LOW" />-->
                   </FXCollections>
               </items>
           </ComboBox>
          <!--end of combo box codes-->
 
          <!--text field for category-->
-         <TextField fx:id="category" prefWidth="170.0" promptText="Enter Category">
+         <TextField fx:id="category" prefWidth="170.0" promptText="Enter Category:">
          </TextField>
 
      </items>
