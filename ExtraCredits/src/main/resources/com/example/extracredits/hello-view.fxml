@@ -25,7 +25,7 @@
     <Label style="-fx-font: NORMAL 20 Tahoma;" text="Task Logs">
     </Label>
 
-    <TableView fx:id="tableView">
+    <TableView fx:id="tableView" onMouseClicked="#handleTableRowClicked">
         <columns>
             <TableColumn fx:id="idColumn" resizable="false" prefWidth="50.0" text="ID">
             </TableColumn>

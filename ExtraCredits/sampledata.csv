@@ -1,5 +1,6 @@
 id,text,completed,due,priority,category
 1,Fix Bug 1234 in ZIP code validator,true,2023/22/08,HIGH,preme
-2,Create Mock-up for new View in Grocery Mobile App,false,2023/30/09,MEDIUM,grocery
-3,Organize Code Review with ASW� On-line� and Marketing teams for new version of website,false,,LOW,
+2,Create Mock-up for new View in Grocery Mobile App,true,2023/30/09,MEDIUM,grocery
+3,Organize Code Review with ASW� On-line� and Marketing teams for new version of website,true,,LOW,
 4,big apple city,true,2005/28/09,HIGH,apple cider
+5,Apple,true,2023/06/08,LOW,

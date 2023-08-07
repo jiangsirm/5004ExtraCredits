@@ -26,7 +26,7 @@ public class TaskLog {
         log = new ArrayList<>();
         try {
             File fileIn = new File(
-                    "/Users/konsteintinj/github-classroom/CS5004-Summer23-Seattle/taskmanager-team-number-two/sampledata.csv");
+                    "/Users/konsteintinj/Desktop/NEU/2023Summer/5004/extra credits/5004ExtraCredits/ExtraCredits/sampledata.csv");
             Scanner scan = new Scanner(fileIn);
             header = scan.nextLine();
             while (scan.hasNext()) {
@@ -170,7 +170,7 @@ public class TaskLog {
      * @param ID id of a Task
      */
     public void completeTask(int ID) throws IllegalArgumentException {
-        int idx = ID - 1;
+        int idx = ID;
 
         try {
             Task noUse = log.get(idx);
@@ -288,7 +288,7 @@ public class TaskLog {
      */
     public void writeToFile() {
         try {
-            File fileOut = new File("/Users/konsteintinj/github-classroom/CS5004-Summer23-Seattle/taskmanager-team-number-two/sampledata.csv");
+            File fileOut = new File("/Users/konsteintinj/Desktop/NEU/2023Summer/5004/extra credits/5004ExtraCredits/ExtraCredits/sampledata.csv");
             FileWriter w = new FileWriter(fileOut);
             w.write(header);
             for (Task t : log) {
