@@ -13,6 +13,8 @@
 
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.DatePicker?>
+<?import com.example.extracredits.Priority?>
+<?import java.lang.Boolean?>
 <VBox alignment="CENTER" prefHeight="528.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.extracredits.HelloController">
 
     <padding>
@@ -25,17 +27,17 @@
 
     <TableView fx:id="tableView">
         <columns>
-            <TableColumn resizable="false" prefWidth="50.0" text="ID">
+            <TableColumn fx:id="idColumn" resizable="false" prefWidth="50.0" text="ID">
             </TableColumn>
-            <TableColumn resizable="false" prefWidth="290.0" text="Text">
+            <TableColumn fx:id="textColumn" resizable="false" prefWidth="290.0" text="Text">
             </TableColumn>
-            <TableColumn resizable="false" prefWidth="80.0" text="Completed">
+            <TableColumn fx:id="statusColumn" resizable="false" prefWidth="80.0" text="Completed">
             </TableColumn>
-            <TableColumn resizable="false" prefWidth="100.0" text="Due">
+            <TableColumn fx:id="dueColumn" resizable="false" prefWidth="100.0" text="Due">
             </TableColumn>
-            <TableColumn resizable="false" prefWidth="80.0" text="Priority">
+            <TableColumn fx:id="priorColumn" resizable="false" prefWidth="80.0" text="Priority">
             </TableColumn>
-            <TableColumn resizable="false" prefWidth="160.0" text="Category">
+            <TableColumn fx:id="catColumn" resizable="false" prefWidth="160.0" text="Category">
             </TableColumn>
         </columns>
     </TableView>
@@ -51,22 +53,23 @@
          <ComboBox fx:id="complete" prefWidth="90.0" promptText="choose">
              <items>
                  <FXCollections fx:factory="observableArrayList">
-                     <String fx:value="True" />
-                     <String fx:value="false" />
+                     <Boolean fx:value="true" />
+                     <Boolean fx:value="false" />
                  </FXCollections>
              </items>
          </ComboBox>
          <!--end of combo box codes-->
-         <DatePicker fx:id="date" prefWidth="120" promptText="Select due date">
+
+         <DatePicker fx:id="date" prefWidth="120" promptText="Select due">
          </DatePicker>
 
           <!--codes for priority combo box-->
           <ComboBox fx:id="priority" prefWidth="90.0" promptText="choose">
               <items>
                   <FXCollections fx:factory="observableArrayList">
-                      <String fx:value="HIGH" />
-                      <String fx:value="MEDIUM" />
-                      <String fx:value="LOW" />
+                      <Priority fx:value="HIGH" />
+                      <Priority fx:value="MEDIUM" />
+                      <Priority fx:value="LOW" />
                   </FXCollections>
               </items>
           </ComboBox>
